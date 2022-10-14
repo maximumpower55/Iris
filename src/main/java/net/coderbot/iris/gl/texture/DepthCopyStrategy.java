@@ -2,8 +2,10 @@ package net.coderbot.iris.gl.texture;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
 import net.coderbot.iris.gl.framebuffer.GlFramebuffer;
+import net.coderbot.iris.render.IrisRenderSystem;
+
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL20C;
 import org.lwjgl.opengl.GL30C;

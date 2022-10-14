@@ -1,7 +1,7 @@
 package net.coderbot.iris.gl.uniform;
 
-import net.coderbot.iris.gl.IrisRenderSystem;
 import net.coderbot.iris.gl.state.ValueUpdateNotifier;
+import net.coderbot.iris.render.IrisRenderSystem;
 
 import java.util.function.IntSupplier;
 

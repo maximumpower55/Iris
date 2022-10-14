@@ -1,11 +1,13 @@
 package net.coderbot.iris.gl.blending;
 
+import net.coderbot.iris.render.pipeline.state.BlendFunc;
+
 public class BlendModeOverride {
 	public static final BlendModeOverride OFF = new BlendModeOverride(null);
 
-	private final BlendMode blendMode;
+	private final BlendFunc blendMode;
 
-	public BlendModeOverride(BlendMode blendMode) {
+	public BlendModeOverride(BlendFunc blendMode) {
 		this.blendMode = blendMode;
 	}
 

@@ -9,14 +9,14 @@ import it.unimi.dsi.fastutil.objects.Object2FloatOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.coderbot.iris.Iris;
-import net.coderbot.iris.gl.IrisRenderSystem;
 import net.coderbot.iris.gl.blending.AlphaTest;
 import net.coderbot.iris.gl.blending.AlphaTestFunction;
 import net.coderbot.iris.gl.blending.AlphaTestOverride;
-import net.coderbot.iris.gl.blending.BlendMode;
 import net.coderbot.iris.gl.blending.BlendModeFunction;
 import net.coderbot.iris.gl.blending.BlendModeOverride;
 import net.coderbot.iris.gl.texture.TextureScaleOverride;
+import net.coderbot.iris.render.IrisRenderSystem;
+import net.coderbot.iris.render.pipeline.state.BlendFunc;
 import net.coderbot.iris.gl.blending.BufferBlendOverride;
 import net.coderbot.iris.shaderpack.option.ShaderPackOptions;
 import net.coderbot.iris.shaderpack.preprocessor.PropertiesPreprocessor;
@@ -251,7 +251,7 @@ public class ShaderProperties {
 						i++;
 					}
 
-					bufferBlendOverrides.computeIfAbsent(parts[0], list -> new ArrayList<>()).add(new BufferBlendOverride(index, new BlendMode(modes[0], modes[1], modes[2], modes[3])));
+					bufferBlendOverrides.computeIfAbsent(parts[0], list -> new ArrayList<>()).add(new BufferBlendOverride(index, new BlendFunc(modes[0], modes[1], modes[2], modes[3])));
 
 					return;
 				}
@@ -270,7 +270,7 @@ public class ShaderProperties {
 					i++;
 				}
 
-				blendModeOverrides.put(pass, new BlendModeOverride(new BlendMode(modes[0], modes[1], modes[2], modes[3])));
+				blendModeOverrides.put(pass, new BlendModeOverride(new BlendFunc(modes[0], modes[1], modes[2], modes[3])));
 			});
 
 			handleProgramEnabledDirective("program.", key, value, program -> {

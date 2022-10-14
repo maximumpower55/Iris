@@ -1,26 +1,28 @@
 package net.coderbot.iris.gl.blending;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
 import net.coderbot.iris.mixin.GlStateManagerAccessor;
 import net.coderbot.iris.mixin.statelisteners.BooleanStateAccessor;
+import net.coderbot.iris.render.IrisRenderSystem;
+import net.coderbot.iris.render.pipeline.state.BlendFunc;
 
 public class BlendModeStorage {
 	private static boolean originalBlendEnable;
-	private static BlendMode originalBlend;
+	private static BlendFunc originalBlend;
 	private static boolean blendLocked;
 
 	public static boolean isBlendLocked() {
 		return blendLocked;
 	}
 
-	public static void overrideBlend(BlendMode override) {
+	public static void overrideBlend(BlendFunc override) {
 		if (!blendLocked) {
 			// Only save the previous state if the blend mode wasn't already locked
 			GlStateManager.BlendState blendState = GlStateManagerAccessor.getBLEND();
 
 			originalBlendEnable = ((BooleanStateAccessor) blendState.mode).isEnabled();
-			originalBlend = new BlendMode(blendState.srcRgb, blendState.dstRgb, blendState.srcAlpha, blendState.dstAlpha);
+			originalBlend = new BlendFunc(blendState.srcRgb, blendState.dstRgb, blendState.srcAlpha, blendState.dstAlpha);
 		}
 
 		blendLocked = false;
@@ -35,13 +37,13 @@ public class BlendModeStorage {
 		blendLocked = true;
 	}
 
-	public static void overrideBufferBlend(int index, BlendMode override) {
+	public static void overrideBufferBlend(int index, BlendFunc override) {
 		if (!blendLocked) {
 			// Only save the previous state if the blend mode wasn't already locked
 			GlStateManager.BlendState blendState = GlStateManagerAccessor.getBLEND();
 
 			originalBlendEnable = ((BooleanStateAccessor) blendState.mode).isEnabled();
-			originalBlend = new BlendMode(blendState.srcRgb, blendState.dstRgb, blendState.srcAlpha, blendState.dstAlpha);
+			originalBlend = new BlendFunc(blendState.srcRgb, blendState.dstRgb, blendState.srcAlpha, blendState.dstAlpha);
 		}
 
 		if (override == null) {
@@ -59,7 +61,7 @@ public class BlendModeStorage {
 	}
 
 	public static void deferBlendFunc(int srcRgb, int dstRgb, int srcAlpha, int dstAlpha) {
-		originalBlend = new BlendMode(srcRgb, dstRgb, srcAlpha, dstAlpha);
+		originalBlend = new BlendFunc(srcRgb, dstRgb, srcAlpha, dstAlpha);
 	}
 
 	public static void restoreBlend() {

@@ -1,7 +1,8 @@
 package net.coderbot.iris.texture.util;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL30;

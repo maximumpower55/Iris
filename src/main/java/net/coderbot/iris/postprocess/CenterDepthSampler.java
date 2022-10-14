@@ -3,7 +3,7 @@ package net.coderbot.iris.postprocess;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
 import net.coderbot.iris.gl.framebuffer.GlFramebuffer;
 import net.coderbot.iris.gl.program.Program;
 import net.coderbot.iris.gl.program.ProgramBuilder;
@@ -13,6 +13,7 @@ import net.coderbot.iris.gl.texture.DepthCopyStrategy;
 import net.coderbot.iris.gl.texture.InternalTextureFormat;
 import net.coderbot.iris.gl.texture.PixelType;
 import net.coderbot.iris.gl.uniform.UniformUpdateFrequency;
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.coderbot.iris.rendertarget.RenderTargets;
 import net.coderbot.iris.uniforms.SystemTimeUniforms;
 import net.minecraft.client.Minecraft;

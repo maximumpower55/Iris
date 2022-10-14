@@ -1,7 +1,8 @@
 package net.coderbot.iris.gl.image;
 
-import net.coderbot.iris.gl.IrisRenderSystem;
 import org.lwjgl.opengl.GL42C;
+
+import net.coderbot.iris.render.IrisRenderSystem;
 
 import java.util.function.IntSupplier;
 

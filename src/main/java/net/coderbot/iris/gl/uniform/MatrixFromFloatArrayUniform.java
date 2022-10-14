@@ -1,7 +1,8 @@
 package net.coderbot.iris.gl.uniform;
 
-import net.coderbot.iris.gl.IrisRenderSystem;
 import org.lwjgl.BufferUtils;
+
+import net.coderbot.iris.render.IrisRenderSystem;
 
 import java.nio.FloatBuffer;
 import java.util.Arrays;

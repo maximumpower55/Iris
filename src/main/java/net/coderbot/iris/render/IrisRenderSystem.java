@@ -1,4 +1,4 @@
-package net.coderbot.iris.gl;
+package net.coderbot.iris.render;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -12,7 +12,6 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30C;
 import org.lwjgl.opengl.GL40C;
-import org.lwjgl.opengl.GL42C;
 import org.lwjgl.opengl.GL45C;
 import org.lwjgl.system.MemoryUtil;
 
@@ -25,7 +24,6 @@ import java.nio.IntBuffer;
  */
 public class IrisRenderSystem {
 	private static DSAAccess dsaState;
-	private static boolean hasMultibind;
 	private static boolean supportsCompute;
 
 	public static void initRenderer() {
@@ -38,12 +36,6 @@ public class IrisRenderSystem {
 		} else {
 			dsaState = new DSAUnsupported();
 			Iris.logger.info("DSA support not detected.");
-		}
-
-		if (GL.getCapabilities().OpenGL45 || GL.getCapabilities().GL_ARB_multi_bind) {
-			hasMultibind = true;
-		} else {
-			hasMultibind = false;
 		}
 
 		supportsCompute = supportsCompute();
@@ -263,7 +255,7 @@ public class IrisRenderSystem {
 		RenderSystem.assertThread(RenderSystem::isOnRenderThreadOrInit);
 		GL40C.glBlendFuncSeparatei(buffer, srcRGB, dstRGB, srcAlpha, dstAlpha);
   }
-  
+
 	public static void bindTextureToUnit(int unit, int texture) {
 		dsaState.bindTextureToUnit(unit, texture);
 	}

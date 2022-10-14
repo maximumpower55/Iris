@@ -2,7 +2,8 @@ package net.coderbot.iris.rendertarget;
 
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.coderbot.iris.shaderpack.texture.CustomTextureData;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import org.lwjgl.opengl.GL11C;

@@ -2,10 +2,11 @@ package net.coderbot.iris.rendertarget;
 
 import com.google.common.collect.ImmutableSet;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
 import net.coderbot.iris.gl.framebuffer.GlFramebuffer;
 import net.coderbot.iris.gl.texture.DepthBufferFormat;
 import net.coderbot.iris.gl.texture.DepthCopyStrategy;
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.coderbot.iris.shaderpack.PackDirectives;
 import net.coderbot.iris.shaderpack.PackRenderTargetDirectives;
 import net.coderbot.iris.vendored.joml.Vector2i;

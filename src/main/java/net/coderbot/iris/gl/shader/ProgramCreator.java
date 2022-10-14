@@ -4,7 +4,8 @@ package net.coderbot.iris.gl.shader;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.coderbot.iris.gl.GLDebug;
-import net.coderbot.iris.gl.IrisRenderSystem;
+import net.coderbot.iris.render.IrisRenderSystem;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.GL20C;

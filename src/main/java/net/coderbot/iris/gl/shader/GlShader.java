@@ -5,7 +5,8 @@ package net.coderbot.iris.gl.shader;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.coderbot.iris.gl.GLDebug;
 import net.coderbot.iris.gl.GlResource;
-import net.coderbot.iris.gl.IrisRenderSystem;
+import net.coderbot.iris.render.IrisRenderSystem;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.GL20C;
@@ -29,7 +30,6 @@ public class GlShader extends GlResource {
 
     private static int createShader(ShaderType type, String name, String src) {
 		int handle = GlStateManager.glCreateShader(type.id);
-		ShaderWorkarounds.safeShaderSource(handle, src);
 		GlStateManager.glCompileShader(handle);
 
 		GLDebug.nameObject(KHRDebug.GL_SHADER, handle, name + "(" + type.name().toLowerCase(Locale.ROOT) + ")");

@@ -2,13 +2,14 @@ package net.coderbot.iris.gl.program;
 
 import com.google.common.collect.ImmutableSet;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
 import net.coderbot.iris.gl.image.ImageHolder;
 import net.coderbot.iris.gl.sampler.SamplerHolder;
 import net.coderbot.iris.gl.shader.GlShader;
 import net.coderbot.iris.gl.shader.ProgramCreator;
 import net.coderbot.iris.gl.shader.ShaderType;
 import net.coderbot.iris.gl.texture.InternalTextureFormat;
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.coderbot.iris.gl.state.ValueUpdateNotifier;
 import org.jetbrains.annotations.Nullable;
 

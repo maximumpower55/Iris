@@ -1,6 +1,6 @@
 package net.coderbot.iris.gl.image;
 
-import net.coderbot.iris.gl.IrisRenderSystem;
+import net.coderbot.iris.render.IrisRenderSystem;
 
 public class ImageLimits {
 	private final int maxImageUnits;

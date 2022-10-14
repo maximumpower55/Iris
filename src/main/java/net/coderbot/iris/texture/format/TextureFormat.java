@@ -1,7 +1,8 @@
 package net.coderbot.iris.texture.format;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.coderbot.iris.texture.mipmap.CustomMipmapGenerator;
 import net.coderbot.iris.texture.pbr.PBRType;
 import net.minecraft.client.renderer.texture.AbstractTexture;

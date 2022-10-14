@@ -1,6 +1,6 @@
 package net.coderbot.iris.gl.uniform;
 
-import net.coderbot.iris.gl.IrisRenderSystem;
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.coderbot.iris.vendored.joml.Matrix4f;
 import org.lwjgl.BufferUtils;
 

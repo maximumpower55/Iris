@@ -1,6 +1,6 @@
 package net.coderbot.iris.features;
 
-import net.coderbot.iris.gl.IrisRenderSystem;
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.minecraft.client.resources.language.I18n;
 import org.apache.commons.lang3.text.WordUtils;
 

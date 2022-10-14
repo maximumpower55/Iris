@@ -2,11 +2,12 @@ package net.coderbot.iris.gl.program;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
 import net.coderbot.iris.gl.image.ImageBinding;
 import net.coderbot.iris.gl.image.ImageHolder;
 import net.coderbot.iris.gl.image.ImageLimits;
 import net.coderbot.iris.gl.texture.InternalTextureFormat;
+import net.coderbot.iris.render.IrisRenderSystem;
 
 import java.util.ArrayList;
 import java.util.List;

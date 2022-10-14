@@ -3,7 +3,9 @@ package net.coderbot.iris.postprocess;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
-import net.coderbot.iris.gl.IrisRenderSystem;
+
+import net.coderbot.iris.render.IrisRenderSystem;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20C;
 

@@ -1,7 +1,8 @@
 package net.coderbot.iris.compat.sodium.mixin.shader_overrides;
 
 import me.jellysquid.mods.sodium.client.render.chunk.shader.ChunkProgram;
-import net.coderbot.iris.gl.IrisRenderSystem;
+import net.coderbot.iris.render.IrisRenderSystem;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;

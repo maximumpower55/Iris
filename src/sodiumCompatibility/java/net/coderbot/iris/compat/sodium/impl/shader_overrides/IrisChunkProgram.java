@@ -11,10 +11,10 @@ import com.mojang.math.Matrix4f;
 import me.jellysquid.mods.sodium.client.gl.device.RenderDevice;
 import me.jellysquid.mods.sodium.client.render.chunk.shader.ChunkProgram;
 import me.jellysquid.mods.sodium.client.render.chunk.shader.ChunkShaderFogComponent;
-import net.coderbot.iris.gl.IrisRenderSystem;
 import net.coderbot.iris.gl.program.ProgramImages;
 import net.coderbot.iris.gl.program.ProgramSamplers;
 import net.coderbot.iris.gl.program.ProgramUniforms;
+import net.coderbot.iris.render.IrisRenderSystem;
 import net.minecraft.resources.ResourceLocation;
 
 public class IrisChunkProgram extends ChunkProgram {

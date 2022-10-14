@@ -12,7 +12,7 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-package net.coderbot.iris.gl.shader;
+package net.coderbot.iris.render.gl.shader;
 
 import org.lwjgl.PointerBuffer;
 import org.lwjgl.opengl.GL20C;
